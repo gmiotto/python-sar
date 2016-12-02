@@ -18,13 +18,13 @@ PATTERN_CPU = ".*CPU.*(usr|user).*nice.*sys.*"
 
 """Regexp terms for finding fields in SAR parts for CPU"""
 FIELDS_CPU = [
-    '\%(usr|user)', '\%nice', '\%sys', '\%iowait', '\%idle'
+    '\%(usr|user)', '\%nice', '\%sys', '\%iowait', '\%idle', '\%guest', '\%soft'
 ]
 
 """Pair regexp terms with field names in CPU output dictionary"""
 FIELD_PAIRS_CPU = {
     'usr': FIELDS_CPU[0], 'nice': FIELDS_CPU[1], 'sys': FIELDS_CPU[2],
-    'iowait': FIELDS_CPU[3], 'idle': FIELDS_CPU[4]
+    'iowait': FIELDS_CPU[3], 'idle': FIELDS_CPU[4], 'guest': FIELDS_CPU[5], 'soft': FIELDS_CPU[6]
 }
 
 """Mem usage regexp pattern for detecting SAR section header"""
